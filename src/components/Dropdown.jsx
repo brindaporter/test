@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Dropdown.css";
 
 class Dropdown extends Component {
   state = { optionList: [], open: false };
@@ -7,6 +8,7 @@ class Dropdown extends Component {
     return this.props.options.map((option) => {
       return (
         <div
+          className="dropdown-item"
           key={option.name}
           onClick={() => this.props.onSelectedChange(option)}
         >
